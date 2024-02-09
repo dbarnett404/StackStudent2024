@@ -2,11 +2,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CheckCodeUtilTest {
-
+class CheckCodeTest {
     @Test
     void checkBitPattern() {
-        CheckCodeUtil checkCodeUtil = new CheckCodeUtil();
+        CheckCode checkCodeUtil = new CheckCodeUtil();
         assertFalse(checkCodeUtil.checkBitPattern("00 00 00 00"));
         assertTrue(checkCodeUtil.checkBitPattern("01 01 01 01"));
         assertTrue(checkCodeUtil.checkBitPattern("00 11 00 11"));
@@ -15,7 +14,7 @@ class CheckCodeUtilTest {
 
     @Test
     void isSymmetrical() {
-        CheckCodeUtil checkCodeUtil = new CheckCodeUtil();
+        CheckCode checkCodeUtil = new CheckCodeUtil();
         assertTrue(checkCodeUtil.isSymmetrical("00 00 00 00"));
         assertTrue(checkCodeUtil.isSymmetrical("01 01 10 10"));
         assertTrue(checkCodeUtil.isSymmetrical("10 00 00 01"));

@@ -16,17 +16,6 @@ public class CheckCodeUtil implements CheckCode {
     public boolean checkBitPattern(String code) {
         int count = 0;
         code = removeWhiteSpace(code);
-        while (count < code.length()) {
-            char c = code.charAt(count);
-            int checkCount = 0;
-            while (count < code.length() && code.charAt(count) == c) {
-                count++;
-                checkCount++;
-                if (checkCount > 2) {
-                    return false;
-                }
-            }
-        }
         return true;
     }
 
@@ -40,12 +29,6 @@ public class CheckCodeUtil implements CheckCode {
          */
     public boolean isSymmetrical(String code) {
         code = removeWhiteSpace(code);
-        Stack stack = new ArrayStack(code.length());
-        for (int i = 0; i < code.length(); i++) {
-            stack.push(code.charAt(i));
-        }
-        System.out.println("Stack is " + stack);
-        System.out.println("Code is " + code);
-        return code.equals(stack.toString());
+        return true;
     }
 }
